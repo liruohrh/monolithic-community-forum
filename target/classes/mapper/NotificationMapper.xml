@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.liruo.communityforum.mapper.NotificationMapper">
+
+    <resultMap id="BaseResultMap" type="com.liruo.communityforum.model.domain.Notification">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="userId" column="user_id" jdbcType="BIGINT"/>
+            <result property="total" column="total" jdbcType="INTEGER"/>
+            <result property="favorReadCount" column="favor_read_count" jdbcType="INTEGER"/>
+            <result property="commentReadCount" column="comment_read_count" jdbcType="INTEGER"/>
+            <result property="systemReadCount" column="system_read_count" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,user_id,total,
+        favor_read_count,comment_read_count,system_read_count
+    </sql>
+</mapper>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.liruo.communityforum.mapper.SystemNotificationMapper">
+
+    <resultMap id="BaseResultMap" type="com.liruo.communityforum.model.domain.SystemNotification">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="created" column="created" jdbcType="BIGINT"/>
+            <result property="logoUrl" column="logo_url" jdbcType="VARCHAR"/>
+            <result property="themeName" column="theme_name" jdbcType="VARCHAR"/>
+            <result property="content" column="content" jdbcType="VARCHAR"/>
+            <result property="read" column="read" jdbcType="TINYINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,created,logo_url,
+        theme_name,content,read
+    </sql>
+</mapper>

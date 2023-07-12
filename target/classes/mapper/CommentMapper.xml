@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.liruo.communityforum.mapper.CommentMapper">
+
+    <resultMap id="BaseResultMap" type="com.liruo.communityforum.model.domain.Comment">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="created" column="created" jdbcType="BIGINT"/>
+            <result property="deleted" column="deleted" jdbcType="TINYINT"/>
+            <result property="postId" column="post_id" jdbcType="BIGINT"/>
+            <result property="userId" column="user_id" jdbcType="BIGINT"/>
+            <result property="communityId" column="community_id" jdbcType="BIGINT"/>
+            <result property="parentId" column="parent_id" jdbcType="BIGINT"/>
+            <result property="replyToId" column="reply_to_id" jdbcType="BIGINT"/>
+            <result property="replyToUserId" column="reply_to_user_id" jdbcType="BIGINT"/>
+            <result property="content" column="content" jdbcType="VARCHAR"/>
+            <result property="favorCount" column="favor_count" jdbcType="INTEGER"/>
+            <result property="replyCount" column="reply_count" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,created,deleted,
+        post_id,user_id,community_id,
+        parent_id,reply_to_id,reply_to_user_id,
+        content,favor_count,reply_count
+    </sql>
+</mapper>

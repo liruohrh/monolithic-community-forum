@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.liruo.communityforum.mapper.PostFavorMapper">
+
+    <resultMap id="BaseResultMap" type="com.liruo.communityforum.model.domain.PostFavor">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="created" column="created" jdbcType="BIGINT"/>
+            <result property="postId" column="post_id" jdbcType="BIGINT"/>
+            <result property="userId" column="user_id" jdbcType="BIGINT"/>
+            <result property="ownerId" column="owner_id" jdbcType="BIGINT"/>
+            <result property="read" column="read" jdbcType="TINYINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,created,post_id,
+        user_id,owner_id,read
+    </sql>
+</mapper>

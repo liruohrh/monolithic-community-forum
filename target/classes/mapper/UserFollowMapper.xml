@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.liruo.communityforum.mapper.UserFollowMapper">
+
+    <resultMap id="BaseResultMap" type="com.liruo.communityforum.model.domain.UserFollow">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="followee" column="followee" jdbcType="BIGINT"/>
+            <result property="follower" column="follower" jdbcType="BIGINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,followee,follower
+    </sql>
+</mapper>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.liruo.communityforum.mapper.CommunityMapper">
+
+    <resultMap id="BaseResultMap" type="com.liruo.communityforum.model.domain.Community">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="created" column="created" jdbcType="BIGINT"/>
+            <result property="deleted" column="deleted" jdbcType="TINYINT"/>
+            <result property="communityType" column="community_type" jdbcType="VARCHAR"/>
+            <result property="presidentId" column="president_id" jdbcType="BIGINT"/>
+            <result property="name" column="name" jdbcType="VARCHAR"/>
+            <result property="logoUrl" column="logo_url" jdbcType="VARCHAR"/>
+            <result property="description" column="description" jdbcType="VARCHAR"/>
+            <result property="numbers" column="numbers" jdbcType="INTEGER"/>
+            <result property="close" column="close" jdbcType="TINYINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,created,deleted,
+        community_type,president_id,name,
+        logo_url,description,numbers,
+        close
+    </sql>
+</mapper>
